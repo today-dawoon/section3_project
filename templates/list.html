@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+   <body>
+      <table border = 1>
+         <thead>
+            <td>Title</td>
+            <td>Genre</td>
+            <td>Original_language</td>
+            <td>Overview</td>
+         </thead>
+         
+         {% for row in rows %} <!-- rows는 리스트 타입으로 전달받았음.-->
+            <tr>
+               <td>{{row["Title"]}}</td>    <!--키 값을 통해 value 값 출력.-->
+               <td>{{row["Genre"]}}</td>
+               <td>{{row["Original_language"]}}</td>
+               <td>{{row['Overview']}}</td>    
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+   </body>
+</html>
